@@ -25,6 +25,20 @@
     "paths": {
       "~/*": ["./app/*"]
     },
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "trackFieldUsage": false,
+        "shouldCheckForColocatedFragments": false,
+        "schemas": [
+          {
+            "name": "bigcommerce",
+            "schema": "./bigcommerce.graphql",
+            "tadaOutputLocation": "./bigcommerce-graphql.d.ts"
+          }
+        ]
+      }
+    ],
 
     // Vite takes care of building everything, not tsc.
     "noEmit": true
